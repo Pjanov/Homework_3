@@ -5,3 +5,13 @@
 3 -> 1, 8, 27
 5 -> 1, 8, 27, 64, 125
 */
+
+Console.Write("Введите число (N): ");
+double N = double.Parse(Console.ReadLine()!);
+
+Console.Write($"Таблица кубов чисел от 1 до {N}: ");
+for(double i = 1; i <= N; i++) 
+{
+    double res = Math.Pow(i, 3);
+    Console.Write($"{res} {(i != N ? "," : "\n")}");
+}
